@@ -1,0 +1,6 @@
+[book]
+authors = ["wdhg"]
+language = "en"
+multilingual = false
+src = "src"
+title = "60020 Simulation and Modelling"
