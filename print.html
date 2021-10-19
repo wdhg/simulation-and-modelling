@@ -1,0 +1,364 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>60020 Simulation and Modelling</title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="preface.html"><strong aria-hidden="true">1.</strong> Preface</a></li><li class="chapter-item expanded "><a href="operational-laws.html"><strong aria-hidden="true">2.</strong> Operational Laws</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="operational-laws/the-flow-balance-assumption.html"><strong aria-hidden="true">2.1.</strong> The Flow Balance Assumption</a></li><li class="chapter-item expanded "><a href="operational-laws/open-and-closed-systems.html"><strong aria-hidden="true">2.2.</strong> Open and Closed Systems</a></li><li class="chapter-item expanded "><a href="operational-laws/resources.html"><strong aria-hidden="true">2.3.</strong> Resources</a></li><li class="chapter-item expanded "><a href="operational-laws/the-utilisation-law.html"><strong aria-hidden="true">2.4.</strong> The Utilisation Law</a></li><li class="chapter-item expanded "><a href="operational-laws/littles-law.html"><strong aria-hidden="true">2.5.</strong> Little's Law</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="operational-laws/littles-law/the-response-time-law.html"><strong aria-hidden="true">2.5.1.</strong> The Response Time Law</a></li></ol></li><li class="chapter-item expanded "><a href="operational-laws/forced-flow-law.html"><strong aria-hidden="true">2.6.</strong> Forced Flow Law</a></li><li class="chapter-item expanded "><a href="operational-laws/the-service-demand-bottleneck-laws.html"><strong aria-hidden="true">2.7.</strong> The Service Demand/Bottleneck Laws</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="operational-laws/the-service-demand-bottleneck-laws/bottlenecks-and-throughput-bounds.html"><strong aria-hidden="true">2.7.1.</strong> Bottlenecks and Throughtput Bounds</a></li><li class="chapter-item expanded "><a href="operational-laws/the-service-demand-bottleneck-laws/response-time-bounds.html"><strong aria-hidden="true">2.7.2.</strong> Response Time Bounds</a></li><li class="chapter-item expanded "><a href="operational-laws/the-service-demand-bottleneck-laws/performance-optimisation.html"><strong aria-hidden="true">2.7.3.</strong> Performance Optimisation</a></li></ol></li><li class="chapter-item expanded "><a href="operational-laws/traffic-equations.html"><strong aria-hidden="true">2.8.</strong> Traffic Equations</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">60020 Simulation and Modelling</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="preface"><a class="header" href="#preface">Preface</a></h1>
+<p>This book contains my notes for course 50004 Operating Systems by <a href="http://wp.doc.ic.ac.uk/ajf/">Tony Field</a> and <a href="http://wp.doc.ic.ac.uk/gcasale/">Giuliano Casale</a> at Imperial College London.</p>
+<p>This book's source can be found <a href="https://github.com/wdhg/simulation-and-modelling">here</a>. Please feel free to submit any issues / pull requests if anything is wrong or unclear.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="operational-laws"><a class="header" href="#operational-laws">Operational Laws</a></h1>
+<p>Given an arbitrary system (real, simulated, etc), if measurements can be made upon it then the 'operational laws' link these quantities together.</p>
+<p>For example, take an &quot;open&quot; system (more on this later) which has arrivals entering it and completions exiting it:</p>
+<pre><code>
+  Arrivals        Completions
+  -------&gt;(System)----------&gt;
+
+</code></pre>
+<p>For an amount of time <code>T</code>, let:</p>
+<ul>
+<li><code>A</code> represent the number of a arrivals</li>
+<li><code>C</code> represent the number of completions</li>
+</ul>
+<p>From this, we can begin to determine three relationships:</p>
+<ol>
+<li>The <em>arrival rate</em> is <code>λ = A/T</code> (arrivals per unit time)</li>
+<li>The <em>average inter-arrival time</em> is <code>λ^-1 = T/A</code> (average amount of time between arrivals)</li>
+<li>The <em>throughput (traffic rate)</em> is <code>X = C/T</code> (completions per unit time)</li>
+</ol>
+<p>(Note that throughput can be meassured on any arc).</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-flow-balance-assumption"><a class="header" href="#the-flow-balance-assumption">The Flow Balance Assumption</a></h1>
+<p>Typically the number of arrivals is equal to the number of completions (i.e. <code>λ = X</code>). This is the case when either the number of arrivals and completions are equal (<code>A = C</code>) or if their difference (<code>A - C</code>) is small in comparison to them. A system that is in <em>equilibrium</em> (or <em>steady state</em>) must satisfy this.</p>
+<p>If over time (as <code>T -&gt; ∞</code>) this assumption does not hold, then the system is fundamentally unstable.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="open-and-closed-systems"><a class="header" href="#open-and-closed-systems">Open and Closed Systems</a></h1>
+<p>An <strong>open system</strong> is one where jobs can flow in and out of it freely. As a result, the number of jobs in the system can vary over time.</p>
+<p>In a <strong>closed system</strong>, the number of jobs circulating around is fixed to some value <code>N</code>. An example of a closed system is:</p>
+<pre><code>
+  *------------------*
+  |                  |
+  |                  |
+  |                  |
+  *----&gt;(System)-----*
+
+</code></pre>
+<p>The throughput of this example system is the traffic rate on the looping (ingoing and outgoing) arc.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="resources"><a class="header" href="#resources">Resources</a></h1>
+<p>If a resource (server, mutex, network port, etc) is busy for a total time of <code>B</code>, then:</p>
+<ol>
+<li>The <em>utilisation</em> of that resource is <code>U = B/T</code> (the proportion of time that the resource is being used)</li>
+<li>The <em>average service time</em> of each job at the resource is <code>S = B/C</code></li>
+<li>The <em>service rate</em> is <code>µ = S^-1 = C/B</code></li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-utilisation-law"><a class="header" href="#the-utilisation-law">The Utilisation Law</a></h1>
+<pre><code>  U = B/T
+    = B/T * C/C
+    = B/C * C/T
+    = X * S
+</code></pre>
+<p>Since service rates are used a lot, this also comes out to <code>U = X/µ</code>. Note that because <code>B &lt;= T</code> and <code>U = B/T</code> then <code>U &lt;= 1</code>, so using <code>U = X/µ</code> we know that <code>X/µ &lt;= 1</code> so <code>X &lt;= µ</code>. What this means is that the throughput must always be less than or equal to the service rate for the system to be stable.</p>
+<p>Note that in the situation where the arrival rate equals the service rate (<code>λ = µ</code>) this might seem like it would be a stable system but in general (and depending on the distributions of the inter-arrival times and service times) it is actually unstable (more on this later).</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="littles-law"><a class="header" href="#littles-law">Little's Law</a></h1>
+<p>Given an open system, if the population of the system (<code>A - C</code>) was plotted over an observation period <code>(0, T)</code>:</p>
+<pre><code>
+    A - C
+        ^                      Total area = I
+       4|
+        |
+       3|             +-----+                             +---+
+        |             |     |                             |   |
+       2|       +-----+     +---+       +---+     +-------+   +---+
+  I/T- -|- - - -|- - -|- - -|- -|- - - -|- -|- - -|- - - -|- -|- -|
+       1|-------+     |     |   +-------+   +-----+       |   |   |
+        |       |     |     |   |       |   |     |       |   |   |
+       0*---------------------------------------------------------------&gt;
+        0       t1    t2   t3  t4      t5   t6    t7      t8  t9  T   Time
+
+</code></pre>
+<p>Then the total area under the graph <code>I</code> would be in &quot;request-seconds&quot;. Then we have:</p>
+<ol>
+<li>The <em>average number of jobs</em> in the system is <code>N = I/T</code></li>
+<li>The <em>average response time</em> (the average time each job spends in the system) is <code>R = I/C</code></li>
+</ol>
+<p>Using these, Little's Law can be derived:</p>
+<pre><code>  N = I/T
+    = I/T * C/C
+    = C/T * I/C
+    = X * R
+</code></pre>
+<p>This means that the average number of jobs in a system is equal to the product of the throughput and the average response time.</p>
+<p>Little's Law works on <em>any</em> system (or subsystem) in equilibrium. When a system is not yet under equilibrium (say, for example, the system is warming up) then it does not apply.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-response-time-law"><a class="header" href="#the-response-time-law">The Response Time Law</a></h1>
+<p>If a closed system has a fixed population of <code>N</code> users (or customers, packets, jobs, etc) working in &quot;think/compute&quot; mode (i.e. they have a &quot;think time&quot; <code>Z</code> between the completion of a job and the submission of the next) then this is a special case of Little's Law:</p>
+<pre><code>
+  N users with think time Z
+
+           +-()-+
+           + () +
+    *------+ .. +&lt;-----*
+    |      +-()-+      |
+    |                  |
+    |                  |
+    |                  |
+    *----&gt;(System)-----*
+
+       Response time R
+
+</code></pre>
+<p>The average total time for each cycle is <code>R + Z</code> so from Little's Law: <code>N = X * (R + Z)</code> or rearranged as <code>R = N/X - Z</code>. Note this <strong>only</strong> applies for the entire closed system, any subsystem will still obey Little's Law.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="forced-flow-law"><a class="header" href="#forced-flow-law">Forced Flow Law</a></h1>
+<p>Take a system which contains multiple resources inside it and has <code>C</code> completions. Consider an arbitrary resource <code>k</code> inside the system, with <code>C_k</code> completions:</p>
+<pre><code>
+      *------------------*
+      |           C_k    | C
+  ---&gt;| ... --&gt;(k)--&gt; ...|---&gt;
+      |                  |
+      *------------------*
+            System
+
+</code></pre>
+<p>Note that <code>C_k</code> can be <strong>more</strong> than <code>C</code> if jobs go to resource <code>k</code> multiple times inside the system.</p>
+<p>Let <code>V_k = C_k/C</code> be the average number of visits each job makes to resource <code>k</code>. Rearranging and dividing by both sides by <code>T</code> gives <code>X_k = V_k * X</code>, where <code>X_k</code> is the throughput of resource <code>k</code>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-service-demandbottleneck-laws"><a class="header" href="#the-service-demandbottleneck-laws">The Service Demand/Bottleneck Laws</a></h1>
+<p>Given an arbitrary node <code>k</code> inside an arbitrary system, the <em>Service demand</em> <code>D_k = V_k * S_k</code> is the product of average number of visits <code>V_k</code> and the average service time <code>S_k</code>.</p>
+<p>If we multiply the RHS of this equation by <code>X_k / X_k</code>:</p>
+<pre><code>  D_k = V_k * S_k * X_k / X_k
+      = (S_k * X_k) * (V_k / X_k)
+      = U_k / X
+</code></pre>
+<p>where X is the global throughput of the system. Rearranging gives <code>U_k = D_k * X</code>, whichs shows that every <code>U_k</code> and <code>V_k</code> is linked by the global throughput.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bottlenecks-and-throughtput-bounds"><a class="header" href="#bottlenecks-and-throughtput-bounds">Bottlenecks and Throughtput Bounds</a></h1>
+<p>Since <code>U_k = D_k * X</code> and <code>U_k &lt;= 1</code>, then we know <code>X &lt;= 1 / D_k</code> for every node <code>k</code> in the system. From this we get that <code>X &lt;= 1 / D_max</code> where <code>D_max</code> is the maximum of <code>D_k</code>.</p>
+<p>In a system under heavy load we can say that <code>U_max ≈ 1</code> and <code>X ≈ 1 / D_max</code>. What this means is that <code>1 / D_max</code> is the <strong>upper asymptotic bound on throughput under heavy load</strong>, and the resource with the highest demand <code>D_max</code> is the <strong>bottleneck</strong> resource of the system. Note that if the system is open, then <code>λ = X</code> so we also require that <code>λ &lt;= 1 / D_max</code> for the system to be stable.</p>
+<p>In a system under light load jobs are never queued and so the average total time they spend at each resource <code>k</code> is just <code>D_k</code> (remember <code>D_k</code> is the product of the average number of visits per job and the average service time at that resource), so we can say that for the entire system the response time <code>R</code> is the sum of all service demands:<code>R = D_1 + D_2 + ... + D_k</code>. In a closed system, we can apply this to the response time law:</p>
+<pre><code>  X = N / (R + Z)
+    = N / (D + Z)
+</code></pre>
+<p>where <code>D = D_1 + D_2 + ... + D_k</code>. This means that <code>N / (D + Z)</code> is the <strong>upper asymptotic bound on throughput under light load</strong>.</p>
+<p>Combining these two limits, we can say that in general: <code>X &lt;= min(1 / D_max, N / (D + Z))</code>. Note that in an open system we say that <code>Z = 0</code> but we also recognise that <code>N</code> is not fixed. The bound still applies, however it is not as tight as in a closed system.</p>
+<p>When throughput is plotted against the number of jobs, it typically looks like this:</p>
+<p><img src="operational-laws/the-service-demand-bottleneck-laws/./images/throughput-plot.png" alt="A graph of throughput X against number of jobs N being bounded" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="response-time-bounds"><a class="header" href="#response-time-bounds">Response Time Bounds</a></h1>
+<p>Just like with throughput, we can calculate the bounds for response time. In a system under high load, since the throughtput is bounded by <code>X &lt;= 1 / D_max</code> we know that:</p>
+<pre><code>  R = N/X - Z
+    &gt;= N * D_max - Z
+</code></pre>
+<p>In a system under low load, every job experiences the average service demand at each node without needing to queue. That means that the response time is equal to the sum of the service demands <code>D</code>, thus <code>R &gt;= D</code>.</p>
+<p>Putting these together we get <code>R &gt;= max(D, N * D_max - Z)</code>. When response time is plotted against number of jobs it looks like:</p>
+<p><img src="operational-laws/the-service-demand-bottleneck-laws/./images/response-time-plot.png" alt="A graph of response time R against number of jobs N being bounded" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="performance-optimisation"><a class="header" href="#performance-optimisation">Performance Optimisation</a></h1>
+<p><em>Performance optitmisation</em> means / involves:</p>
+<ol>
+<li>Understanding / modelling the system</li>
+<li>Finding the bottleneck node</li>
+<li>Fixing the bottleneck</li>
+</ol>
+<p>When you fix the bottleneck you change the bounds / limits described in the previous two sections. For example, these two graphs show how optimisations can affect the shape of the throughput <code>X</code> / response time <code>R</code> against number of jobs <code>N</code> plots:</p>
+<p><img src="operational-laws/the-service-demand-bottleneck-laws/./images/throughput-optimisation-plot.png" alt="" />
+<img src="operational-laws/the-service-demand-bottleneck-laws/./images/response-time-optimisation-plot.png" alt="" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="traffic-equations"><a class="header" href="#traffic-equations">Traffic Equations</a></h1>
+<p>Consider an arbitrary system with <code>n</code> nodes, where each node <code>k</code> in <code>1 &lt;= k &lt;= n</code> has <code>C_k</code> completions. When the system is at equilibrium, the number of arrivals is equal to the system to the number of completions <code>A = C</code>, and each job arrives exactly once to the system.</p>
+<p>Now consider two arbitrary and distinct nodes <code>i</code> and <code>j</code> where <code>1 &lt;= i, j &lt;= n</code>. Assume that a job that comletes at <code>i</code> has a fixed probability <code>r_ij</code> of moving to node <code>j</code>. Then for any node <code>k</code>, the number of completions <code>C_k</code> must equal the sum of:</p>
+<ol>
+<li>the number of arrivals to the system <code>A</code> multiplied by the probability that an arriving job will move to node <code>k</code> directly, denoted as <code>a_k</code>.</li>
+<li>the sum of the products of every node's number of completions and probability that a job will move to <code>k</code> (note this includes the cyclic arc from <code>k</code> to <code>k</code>).</li>
+</ol>
+<pre><code>C_k = A * a_k
+      + C_1 * r_1k
+      + C_2 * r_2k
+      + ...
+      + C_n * r_nk
+</code></pre>
+<p>If both sides are divided by the total number of completions in the system <code>C</code> we get an equation for the number of visits <code>V_k = C_k / C</code>:</p>
+<pre><code>V_k = a_k
+      + V_1 * r_1k
+      + V_2 * r_2k
+      + ...
+      + V_n * r_nk
+</code></pre>
+<p>Note that <code>A = C</code> hence why it disappears from <code>A * a_k</code>.</p>
+<p>If we divide by the total time <code>T</code> instead, we get an equation for the node throughput <code>X_k</code>:</p>
+<pre><code>X_k = γ_k
+      + X_1 * r_1k
+      + X_2 * r_2k
+      + ...
+      + X_n * r_nk
+</code></pre>
+<p>where <code>γ_k = X * a_k</code> is the direct contribution to throughput from external arrivals.</p>
+<p>We can now take these equations and turn them into vector equations:</p>
+<pre><code>V * (I - R) = a
+X * (I - R) = γ
+</code></pre>
+<p>where:</p>
+<ul>
+<li><code>V</code> is the vector of number of visits for each node.</li>
+<li><code>I</code> is the identity matrix.</li>
+<li><code>R</code> is the maxtrix of probabilities that a job goes from node <code>i</code> to node <code>j</code>.</li>
+<li><code>γ</code> is the vector of direct contributions to throughput from external arrivals for each node.</li>
+</ul>
+<p>Note that often we use arrival rate of node <code>i</code> (denoted as <code>λ_i</code>) instead of throughput. Since arrival rate is the same as throughput, we can write:</p>
+<pre><code>λ * (I - R) = γ
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+    </body>
+</html>
