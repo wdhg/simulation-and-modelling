@@ -14,3 +14,7 @@
     - [Response Time Bounds](./operational-laws/the-service-demand-bottleneck-laws/response-time-bounds.md)
     - [Performance Optimisation](./operational-laws/the-service-demand-bottleneck-laws/performance-optimisation.md)
   - [Traffic Equations](./operational-laws/traffic-equations.md)
+- [Poisson Processes](./poisson-processes.md)
+  - [Properties of the Exponential Distribution](./poisson-processes/properties-of-the-exponential-distribution.md)
+  - [Merging Poisson Processes](./poisson-processes/merging-poisson-processes.md)
+  - [Splitting Poisson Processes](./poisson-processes/splitting-poisson-processes.md)
