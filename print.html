@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="preface.html"><strong aria-hidden="true">1.</strong> Preface</a></li><li class="chapter-item expanded "><a href="operational-laws.html"><strong aria-hidden="true">2.</strong> Operational Laws</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="operational-laws/the-flow-balance-assumption.html"><strong aria-hidden="true">2.1.</strong> The Flow Balance Assumption</a></li><li class="chapter-item expanded "><a href="operational-laws/open-and-closed-systems.html"><strong aria-hidden="true">2.2.</strong> Open and Closed Systems</a></li><li class="chapter-item expanded "><a href="operational-laws/resources.html"><strong aria-hidden="true">2.3.</strong> Resources</a></li><li class="chapter-item expanded "><a href="operational-laws/the-utilisation-law.html"><strong aria-hidden="true">2.4.</strong> The Utilisation Law</a></li><li class="chapter-item expanded "><a href="operational-laws/littles-law.html"><strong aria-hidden="true">2.5.</strong> Little's Law</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="operational-laws/littles-law/the-response-time-law.html"><strong aria-hidden="true">2.5.1.</strong> The Response Time Law</a></li></ol></li><li class="chapter-item expanded "><a href="operational-laws/forced-flow-law.html"><strong aria-hidden="true">2.6.</strong> Forced Flow Law</a></li><li class="chapter-item expanded "><a href="operational-laws/the-service-demand-bottleneck-laws.html"><strong aria-hidden="true">2.7.</strong> The Service Demand/Bottleneck Laws</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="operational-laws/the-service-demand-bottleneck-laws/bottlenecks-and-throughput-bounds.html"><strong aria-hidden="true">2.7.1.</strong> Bottlenecks and Throughtput Bounds</a></li><li class="chapter-item expanded "><a href="operational-laws/the-service-demand-bottleneck-laws/response-time-bounds.html"><strong aria-hidden="true">2.7.2.</strong> Response Time Bounds</a></li><li class="chapter-item expanded "><a href="operational-laws/the-service-demand-bottleneck-laws/performance-optimisation.html"><strong aria-hidden="true">2.7.3.</strong> Performance Optimisation</a></li></ol></li><li class="chapter-item expanded "><a href="operational-laws/traffic-equations.html"><strong aria-hidden="true">2.8.</strong> Traffic Equations</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="preface.html"><strong aria-hidden="true">1.</strong> Preface</a></li><li class="chapter-item expanded "><a href="operational-laws.html"><strong aria-hidden="true">2.</strong> Operational Laws</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="operational-laws/the-flow-balance-assumption.html"><strong aria-hidden="true">2.1.</strong> The Flow Balance Assumption</a></li><li class="chapter-item expanded "><a href="operational-laws/open-and-closed-systems.html"><strong aria-hidden="true">2.2.</strong> Open and Closed Systems</a></li><li class="chapter-item expanded "><a href="operational-laws/resources.html"><strong aria-hidden="true">2.3.</strong> Resources</a></li><li class="chapter-item expanded "><a href="operational-laws/the-utilisation-law.html"><strong aria-hidden="true">2.4.</strong> The Utilisation Law</a></li><li class="chapter-item expanded "><a href="operational-laws/littles-law.html"><strong aria-hidden="true">2.5.</strong> Little's Law</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="operational-laws/littles-law/the-response-time-law.html"><strong aria-hidden="true">2.5.1.</strong> The Response Time Law</a></li></ol></li><li class="chapter-item expanded "><a href="operational-laws/forced-flow-law.html"><strong aria-hidden="true">2.6.</strong> Forced Flow Law</a></li><li class="chapter-item expanded "><a href="operational-laws/the-service-demand-bottleneck-laws.html"><strong aria-hidden="true">2.7.</strong> The Service Demand/Bottleneck Laws</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="operational-laws/the-service-demand-bottleneck-laws/bottlenecks-and-throughput-bounds.html"><strong aria-hidden="true">2.7.1.</strong> Bottlenecks and Throughtput Bounds</a></li><li class="chapter-item expanded "><a href="operational-laws/the-service-demand-bottleneck-laws/response-time-bounds.html"><strong aria-hidden="true">2.7.2.</strong> Response Time Bounds</a></li><li class="chapter-item expanded "><a href="operational-laws/the-service-demand-bottleneck-laws/performance-optimisation.html"><strong aria-hidden="true">2.7.3.</strong> Performance Optimisation</a></li></ol></li><li class="chapter-item expanded "><a href="operational-laws/traffic-equations.html"><strong aria-hidden="true">2.8.</strong> Traffic Equations</a></li></ol></li><li class="chapter-item expanded "><a href="poisson-processes.html"><strong aria-hidden="true">3.</strong> Poisson Processes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="poisson-processes/properties-of-the-exponential-distribution.html"><strong aria-hidden="true">3.1.</strong> Properties of the Exponential Distribution</a></li><li class="chapter-item expanded "><a href="poisson-processes/merging-poisson-processes.html"><strong aria-hidden="true">3.2.</strong> Merging Poisson Processes</a></li><li class="chapter-item expanded "><a href="poisson-processes/splitting-poisson-processes.html"><strong aria-hidden="true">3.3.</strong> Splitting Poisson Processes</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -329,6 +329,112 @@ X * (I - R) = γ
 <p>Note that often we use arrival rate of node <code>i</code> (denoted as <code>λ_i</code>) instead of throughput. Since arrival rate is the same as throughput, we can write:</p>
 <pre><code>λ * (I - R) = γ
 </code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="poisson-processes"><a class="header" href="#poisson-processes">Poisson Processes</a></h1>
+<p>A <em>Poisson arrival processes</em> is an arrival stream where the inter-arrival times <code>T</code> are both independent and <em>exponentially distributed</em>:</p>
+<pre><code>P(T &lt;= t) = 1 - e^(-λt)
+</code></pre>
+<p>Here, <code>λ</code> is often called the processes' &quot;rate&quot; parameter and is equal to the reciprocal of the average inter-arrival time.</p>
+<p>Since the inter-arrival times are exponentially distributed, for a fixed time window the number of arrivals is <em>poisson distributed</em>:</p>
+<pre><code>P(A_t = n) = [(λt)^n * e^(-λt)] / n!
+</code></pre>
+<p>where <code>A_t</code> is the number of arrivals for time interval <code>t</code>. Note the square brackets here <code>[]</code> are just used as an alternative bracket to make it easier to read, they don't have an alternative meaning.</p>
+<p>Poisson processes are often an effective approximation for real world random arrival processes as arrivals are typically:</p>
+<ol>
+<li>independent to each other.</li>
+<li>ignorant of previous arrivals and the state of the system they are arriving at.</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="properties-of-the-exponential-distribution"><a class="header" href="#properties-of-the-exponential-distribution">Properties of the Exponential Distribution</a></h1>
+<p>Here are three properties of the exponential distribution that will be useful to recap:</p>
+<ol>
+<li>The exponential distribution is <em>memoryless</em>, meaning that the future is independent to the past:</li>
+</ol>
+<pre><code>P(X &lt;= t + s | X &gt; t) = 1 - P(X &gt; t + s &amp; X &gt; t) / P(X &gt; t)
+                      = 1 - P(X &gt; t + s)/P(X &gt; t)
+                      = 1 - e^(-λ(t + s)) / e^(-λt)
+                      = 1 - e^(-λs) * e^(-λt) / e^(-λt)
+                      = 1 - e^(-λs)
+                      = P(X &lt;= s)
+</code></pre>
+<ol start="2">
+<li>If <code>X_1 ~ exp(λ_1)</code> and <code>X_2 ~ exp(λ_2)</code> then <code>min(X_1, X_2) ~ exp (λ_1 + λ_2)</code>:</li>
+</ol>
+<pre><code>P(min(X_1, X_2) &lt;= t) = 1 - P(min(X_1, X_2) &gt; t)
+                      = 1 - P(X_1 &gt; t &amp; X_2 &gt; t)
+                      = 1 - e^(-λ_1 * t) * e^(-λ_2 * t)
+                      = 1 - e^(-t(λ_1 + λ_2))
+</code></pre>
+<ol start="3">
+<li>If <code>X_1 ~ exp(λ_1)</code> and <code>X_2 ~ exp(λ_2)</code> then</li>
+</ol>
+<pre><code>               ∞
+P(X_1 &lt; X_2) = ∫ P(X_1 &lt; X_2 | X_1 = x) * λ_1 * e^(-λ_1 * x) dx
+               0
+               ∞
+             = ∫ P(X_2 &gt; x) * λ_1 * e^(-λ_1 * x) dx
+               0
+               ∞
+             = ∫ e^(-λ_2 * x) * λ_1 * e^(-λ_1 * x) dx
+               0
+                   ∞
+             = λ_1 ∫ e^(-x(λ_1 + λ_2)) dx
+                   0
+                                                        ∞
+             = [-λ_1 / (λ_1 + λ_2)] * [e^(-x(λ_1 + λ_2))]
+                                                        0
+             = [-λ_1 / (λ_1 + λ_2)] * (0 - 1)
+             = λ_1 / (λ_1 + λ_2)
+
+P(X_2 &lt; X_1) = λ_2 / (λ_1 + λ_2)
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="merging-poisson-processes"><a class="header" href="#merging-poisson-processes">Merging Poisson Processes</a></h1>
+<p>When two independent Poisson processes with rates <code>λ_1</code> and <code>λ_2</code> are merged together, the result is also a Poisson process with rate <code>λ_1 + λ_2</code>.</p>
+<h3 id="proof"><a class="header" href="#proof">Proof</a></h3>
+<p>Let:</p>
+<ul>
+<li><code>T_1</code> and <code>T_2</code> be the time until the next arrival for two Poisson processes.</li>
+<li><code>T</code> be the time until the next arrival for the merged process.</li>
+</ul>
+<p>Then we get:</p>
+<pre><code>P(T &lt;= t) = P(min(T_1, T_2) &lt;= t)
+          = 1 - e^(-t(λ_1 + λ_2))
+</code></pre>
+<p>Note that this is described more in detail in the <a href="poisson-processes/./properties-of-the-exponential-distribution.html">Properties of the Exponential Distribution section</a>.</p>
+<p>This shows that the inter-arrival times of the merged process is exponential distributed, and so the merged process is Poisson.</p>
+<h2 id="generalised-merging"><a class="header" href="#generalised-merging">Generalised Merging</a></h2>
+<p>We can also generalise this for <code>n &gt;= 2</code> processes. Consider a binary tree of merges. Since the output of a merge is Poisson, it can be merged with another process, thus creating a chain of merges:</p>
+<pre><code>  ()()
+   \/ merge
+   ()()
+    \/ merge
+    ()()
+     \/ merge
+     ()
+</code></pre>
+<h2 id="probability-of-arrival-orders"><a class="header" href="#probability-of-arrival-orders">Probability of Arrival Orders</a></h2>
+<p>The probability that the first arrival will come from the first stream is given by:</p>
+<pre><code>P(T_1 &lt; T_2) = λ_1 (λ_1 + λ_2)
+</code></pre>
+<p>and likewise the probability that the first arrival is from the second stream is:</p>
+<pre><code>P(T_2 &lt; T_1) = λ_2 (λ_1 + λ_2)
+</code></pre>
+<p>Note that this is described more in detail in the <a href="poisson-processes/./properties-of-the-exponential-distribution.html">Properties of the Exponential Distribution section</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="splitting-poisson-processes"><a class="header" href="#splitting-poisson-processes">Splitting Poisson Processes</a></h1>
+<p>If we split a Poisson process with rate <code>λ</code> into two streams, such that there is:</p>
+<ul>
+<li>chance <code>p</code> (<code>0 &lt;= p &lt;= 1</code>) that the arrival will go to the first stream.</li>
+<li>chance <code>1 - p</code> that the arrival will go into the second stream.</li>
+</ul>
+<p>then the resulting two processes will independent Poisson processes with rates <code>λp</code> and <code>λ(1 - p)</code> respectively. From this we can say that:</p>
+<pre><code>P(N_1(t) = m) = (λtp)^m * e^(-λtp) / m!
+</code></pre>
+<p>and</p>
+<pre><code>P(N_2(t) = n) = (λt(1 - p))^n * e^(-λt(1 - p)) / n!
+</code></pre>
+<p>where:</p>
+<ul>
+<li><code>t</code> is the time interval.</li>
+<li><code>N_1(t)</code>, <code>N_2(t)</code> are the number of arrivals seen at both output streams respectively during interval <code>t</code>.</li>
+</ul>
 
                     </main>
 
