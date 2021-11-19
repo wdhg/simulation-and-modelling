@@ -4,44 +4,44 @@ Here are three properties of the exponential distribution that will be useful to
 
 1. The exponential distribution is _memoryless_, meaning that the future is independent to the past:
 
-```
-P(X <= t + s | X > t) = 1 - P(X > t + s & X > t) / P(X > t)
-                      = 1 - P(X > t + s)/P(X > t)
-                      = 1 - e^(-λ(t + s)) / e^(-λt)
-                      = 1 - e^(-λs) * e^(-λt) / e^(-λt)
-                      = 1 - e^(-λs)
-                      = P(X <= s)
-```
+\\[
+\\begin{aligned}
+P(X \\le t + s | X > t) &= 1 - {P(X \\gt t + s \\land X \\gt t) \\over P(X > t)} \\\\
+                        &= 1 - {P(X \\gt t + s) \\over P(X \\gt t)} \\\\
+                        &= 1 - {e^{-\\lambda (t + s)} \\over e^{-λt}} \\\\
+                        &= 1 - {e^{-\\lambda s} * e^{-\\lambda t} \\over e^{-\\lambda t}} \\\\
+                        &= 1 - e^{-\\lambda s} \\\\
+                        &= P(X \\le s)
+\\end{aligned}
+\\]
 
-2. If `X_1 ~ exp(λ_1)` and `X_2 ~ exp(λ_2)` then `min(X_1, X_2) ~ exp (λ_1 + λ_2)`:
+2. If \\( X_1 \\sim exp(\\lambda_1) \\) and \\( X_2 \\sim exp(\\lambda_2) \\) then \\( min(X_1, X_2) \\sim exp(\\lambda_1 + \\lambda_2) \\):
 
-```
-P(min(X_1, X_2) <= t) = 1 - P(min(X_1, X_2) > t)
-                      = 1 - P(X_1 > t & X_2 > t)
-                      = 1 - e^(-λ_1 * t) * e^(-λ_2 * t)
-                      = 1 - e^(-t(λ_1 + λ_2))
-```
+\\[
+\\begin{aligned}
+P(min(X_1, X_2) \\le t) &= 1 - P(min(X_1, X_2) \\gt t) \\\\
+                        &= 1 - P(X_1 \\gt t \\land X_2 \\gt t) \\\\
+                        &= 1 - e^{-\\lambda_1 t} e^{-\\lambda_2 t} \\\\
+                        &= 1 - e^{-t(\\lambda_1 + \\lambda_2)}
+\\end{aligned}
+\\]
 
-3. If `X_1 ~ exp(λ_1)` and `X_2 ~ exp(λ_2)` then
+3. If \\( X_1 \\sim exp(\\lambda_1) \\) and \\( X_2 \\sim exp(\\lambda_2) \\) then
 
-```
-               ∞
-P(X_1 < X_2) = ∫ P(X_1 < X_2 | X_1 = x) * λ_1 * e^(-λ_1 * x) dx
-               0
-               ∞
-             = ∫ P(X_2 > x) * λ_1 * e^(-λ_1 * x) dx
-               0
-               ∞
-             = ∫ e^(-λ_2 * x) * λ_1 * e^(-λ_1 * x) dx
-               0
-                   ∞
-             = λ_1 ∫ e^(-x(λ_1 + λ_2)) dx
-                   0
-                                                        ∞
-             = [-λ_1 / (λ_1 + λ_2)] * [e^(-x(λ_1 + λ_2))]
-                                                        0
-             = [-λ_1 / (λ_1 + λ_2)] * (0 - 1)
-             = λ_1 / (λ_1 + λ_2)
+\\[
+\\begin{aligned}
+P(X_1 < X_2) &= \\int_0^{\\infty} P(X_1 \\lt X_2 | X_1 = x) * \\lambda_1 * e^{-\\lambda_1 x} dx \\\\
+             &= \\int_0^{\\infty} P(X_2 \\gt x) * λ_1 * e^{-\\lambda_1 * x} dx \\\\
+             &= \\int_0^{\\infty} e^{-\\lambda_2 x} * \\lambda_1 * e^{-\\lambda_1 x} dx \\\\
+             &= \\lambda_1 \\int_0^{\\infty} e^{-x(\\lambda_1 + \\lambda_2)} dx \\\\
+             &= {-\\lambda_1 \\over (\\lambda_1 + \\lambda_2)} e^{-x(\\lambda_1 + \\lambda_2)} \\\\
+             &= {-\\lambda_1 \\over (\\lambda_1 + \\lambda_2)} (0 - 1) \\\\
+             &= {\\lambda_1 \\over \\lambda_1 + \\lambda_2} \\\\
+\\end{aligned}
+\\]
 
-P(X_2 < X_1) = λ_2 / (λ_1 + λ_2)
-```
+and therefore by swapping \\( X_1 \\) and \\( X_2 \\):
+
+\\[
+P(X_2 < X_1) = {\\lambda_2 \\over \\lambda_1 + \\lambda_2}
+\\]

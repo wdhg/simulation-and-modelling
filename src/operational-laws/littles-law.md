@@ -1,6 +1,6 @@
 # Little's Law
 
-Given an open system, if the population of the system (`A - C`) was plotted over an observation period `(0, T)`:
+Given an open system, if the population of the system (\\( A - C \\)) was plotted over an observation period \\( (0, T) \\):
 
 
 ```
@@ -20,19 +20,21 @@ Given an open system, if the population of the system (`A - C`) was plotted over
 
 ```
 
-Then the total area under the graph `I` would be in "request-seconds". Then we have:
+Then the total area under the graph \\( I \\) would be in "request-seconds". Then we have:
 
-1. The _average number of jobs_ in the system is `N = I/T`
-2. The _average response time_ (the average time each job spends in the system) is `R = I/C`
+1. The _average number of jobs_ in the system is \\( N = {I \\over T} \\)
+2. The _average response time_ (the average time each job spends in the system) is \\( R = {I \\over C} \\)
 
 Using these, Little's Law can be derived:
 
-```
-  N = I/T
-    = I/T * C/C
-    = C/T * I/C
-    = X * R
-```
+\\[
+\\begin{aligned}
+  N &= {I \\over T} \\\\
+    &= {I \\over T} * {C \\over C} \\\\
+    &= {C \\over T} * {I \\over C} \\\\
+    &= XR
+\\end{aligned}
+\\]
 
 This means that the average number of jobs in a system is equal to the product of the throughput and the average response time.
 

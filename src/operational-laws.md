@@ -11,15 +11,15 @@ For example, take an "open" system (more on this later) which has arrivals enter
 
 ```
 
-For an amount of time `T`, let:
+For an amount of time \\( T \\), let:
 
-- `A` represent the number of a arrivals
-- `C` represent the number of completions
+- \\( A \\) represent the number of a arrivals
+- \\( C \\) represent the number of completions
 
 From this, we can begin to determine three relationships:
 
-1. The _arrival rate_ is `λ = A/T` (arrivals per unit time)
-2. The _average inter-arrival time_ is `λ^-1 = T/A` (average amount of time between arrivals)
-3. The _throughput (traffic rate)_ is `X = C/T` (completions per unit time)
+1. The _arrival rate_ is \\( \\lambda = {A \\over T} \\) (arrivals per unit time)
+2. The _average inter-arrival time_ is \\( \\lambda^{-1} = {T \\over A} \\) (average amount of time between arrivals)
+3. The _throughput (traffic rate)_ is \\( X = {C \\over T} \\) (completions per unit time)
 
 (Note that throughput can be meassured on any arc).

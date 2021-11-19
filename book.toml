@@ -4,3 +4,6 @@ language = "en"
 multilingual = false
 src = "src"
 title = "60020 Simulation and Modelling"
+
+[output.html]
+mathjax-support = true

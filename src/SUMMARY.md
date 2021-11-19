@@ -18,3 +18,5 @@
   - [Properties of the Exponential Distribution](./poisson-processes/properties-of-the-exponential-distribution.md)
   - [Merging Poisson Processes](./poisson-processes/merging-poisson-processes.md)
   - [Splitting Poisson Processes](./poisson-processes/splitting-poisson-processes.md)
+- [Simulation](./simulation.md)
+  - [Discrete-Event Simulation (DES)](./simulation/discrete-event-simulation.md)
