@@ -41,13 +41,13 @@ We can also generalise this for \\( n \\ge 2 \\) processes. Consider a binary tr
 The probability that the first arrival will come from the first stream is given by:
 
 \\[
-P(T_1 \\lt T_2) = \\lambda_1 (\\lambda_1 + \\lambda_2)
+P(T_1 \\lt T_2) = {\\lambda_1 \\over \\lambda_1 + \\lambda_2}
 \\]
 
 and likewise the probability that the first arrival is from the second stream is:
 
 \\[
-P(T_2 < T_1) = \\lambda_2 (\\lambda_1 + \\lambda_2)
+P(T_2 \\lt T_1) = {\\lambda_2 \\over \\lambda_1 + \\lambda_2}
 \\]
 
 Note that this is described more in detail in the [Properties of the Exponential Distribution section](./properties-of-the-exponential-distribution.md).
