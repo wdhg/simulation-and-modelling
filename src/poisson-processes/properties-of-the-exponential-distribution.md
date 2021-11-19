@@ -34,8 +34,8 @@ P(X_1 < X_2) &= \\int_0^{\\infty} P(X_1 \\lt X_2 | X_1 = x) * \\lambda_1 * e^{-\
              &= \\int_0^{\\infty} P(X_2 \\gt x) * λ_1 * e^{-\\lambda_1 * x} dx \\\\
              &= \\int_0^{\\infty} e^{-\\lambda_2 x} * \\lambda_1 * e^{-\\lambda_1 x} dx \\\\
              &= \\lambda_1 \\int_0^{\\infty} e^{-x(\\lambda_1 + \\lambda_2)} dx \\\\
-             &= {-\\lambda_1 \\over (\\lambda_1 + \\lambda_2)} e^{-x(\\lambda_1 + \\lambda_2)} \\\\
-             &= {-\\lambda_1 \\over (\\lambda_1 + \\lambda_2)} (0 - 1) \\\\
+             &= \\lambda_1 \\left[ {-e^{-x(\\lambda_1 + \\lambda_2)} \\over \\lambda_1 + \\lambda_2}  \\right]_0^\\infty \\\\
+             &= \\lambda_1 {0 - (-1) \\over \\lambda_1 + \\lambda_2}  \\\\
              &= {\\lambda_1 \\over \\lambda_1 + \\lambda_2} \\\\
 \\end{aligned}
 \\]
