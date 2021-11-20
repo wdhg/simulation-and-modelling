@@ -19,4 +19,6 @@
   - [Merging Poisson Processes](./poisson-processes/merging-poisson-processes.md)
   - [Splitting Poisson Processes](./poisson-processes/splitting-poisson-processes.md)
 - [Simulation](./simulation.md)
+  - [Monte Carlo](./simulation/monte-carlo.md)
+  - [Discrete-Time Simulation](./simulation/discrete-time-simulation.md)
   - [Discrete-Event Simulation (DES)](./simulation/discrete-event-simulation.md)
