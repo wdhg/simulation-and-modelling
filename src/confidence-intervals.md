@@ -22,7 +22,7 @@ In practice, the confidence interval is typically an **approximate** because of 
 
 To ensure that the measurements \\( X_i \\) are made independently, they can be made by running \\( n \\) **independent replications** (simulations).
 
-Another method would be to run a single simulation to the point of (approximate) equilibrium, running back-to-back fixed time batches of measurements, resetting the the measurements made at the end of each epoch:
+Another method would be to run a single simulation to the point of (approximate) equilibrium, running back-to-back fixed time batches of measurements, resetting the measurements made at the end of each epoch:
 
 ![](./images/batched-observations.png)
 
