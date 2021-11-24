@@ -23,3 +23,4 @@
   - [Discrete-Time Simulation](./simulation/discrete-time-simulation.md)
   - [Discrete-Event Simulation (DES)](./simulation/discrete-event-simulation.md)
     - [Example of a Single-server FIFO Queue](./simulation/discrete-event-simulation/example-of-a-single-server-fifo-queue.md)
+  - [Designing a Simulation Model](./simulation/designing-a-simulation-model.md)
