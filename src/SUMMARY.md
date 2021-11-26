@@ -25,3 +25,8 @@
     - [Example of a Single-server FIFO Queue](./simulation/discrete-event-simulation/example-of-a-single-server-fifo-queue.md)
   - [Designing a Simulation Model](./simulation/designing-a-simulation-model.md)
 - [Confidence Intervals](./confidence-intervals.md)
+- [Distribution Sampling](./distribution-sampling.md)
+  - [Inverse Transform Method](./distribution-sampling/inverse-transform-method.md)
+  - [Acceptance-Rejection (AR) Method](./distribution-sampling/acceptance-rejection-method.md)
+  - [Convolution Method](./distribution-sampling/convolution-method.md)
+  - [Sampling Discrete Distributions](./distribution-sampling/sampling-discrete-distributions.md)
