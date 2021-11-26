@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Merging Poisson Processes - 60020 Simulation and Modelling</title>
+        <title>Convolution Method - 60020 Simulation and Modelling</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -77,7 +77,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../preface.html"><strong aria-hidden="true">1.</strong> Preface</a></li><li class="chapter-item expanded "><a href="../operational-laws.html"><strong aria-hidden="true">2.</strong> Operational Laws</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../operational-laws/the-flow-balance-assumption.html"><strong aria-hidden="true">2.1.</strong> The Flow Balance Assumption</a></li><li class="chapter-item expanded "><a href="../operational-laws/open-and-closed-systems.html"><strong aria-hidden="true">2.2.</strong> Open and Closed Systems</a></li><li class="chapter-item expanded "><a href="../operational-laws/resources.html"><strong aria-hidden="true">2.3.</strong> Resources</a></li><li class="chapter-item expanded "><a href="../operational-laws/the-utilisation-law.html"><strong aria-hidden="true">2.4.</strong> The Utilisation Law</a></li><li class="chapter-item expanded "><a href="../operational-laws/littles-law.html"><strong aria-hidden="true">2.5.</strong> Little's Law</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../operational-laws/littles-law/the-response-time-law.html"><strong aria-hidden="true">2.5.1.</strong> The Response Time Law</a></li></ol></li><li class="chapter-item expanded "><a href="../operational-laws/forced-flow-law.html"><strong aria-hidden="true">2.6.</strong> Forced Flow Law</a></li><li class="chapter-item expanded "><a href="../operational-laws/the-service-demand-bottleneck-laws.html"><strong aria-hidden="true">2.7.</strong> The Service Demand/Bottleneck Laws</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../operational-laws/the-service-demand-bottleneck-laws/bottlenecks-and-throughput-bounds.html"><strong aria-hidden="true">2.7.1.</strong> Bottlenecks and Throughtput Bounds</a></li><li class="chapter-item expanded "><a href="../operational-laws/the-service-demand-bottleneck-laws/response-time-bounds.html"><strong aria-hidden="true">2.7.2.</strong> Response Time Bounds</a></li><li class="chapter-item expanded "><a href="../operational-laws/the-service-demand-bottleneck-laws/performance-optimisation.html"><strong aria-hidden="true">2.7.3.</strong> Performance Optimisation</a></li></ol></li><li class="chapter-item expanded "><a href="../operational-laws/traffic-equations.html"><strong aria-hidden="true">2.8.</strong> Traffic Equations</a></li></ol></li><li class="chapter-item expanded "><a href="../poisson-processes.html"><strong aria-hidden="true">3.</strong> Poisson Processes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../poisson-processes/properties-of-the-exponential-distribution.html"><strong aria-hidden="true">3.1.</strong> Properties of the Exponential Distribution</a></li><li class="chapter-item expanded "><a href="../poisson-processes/merging-poisson-processes.html" class="active"><strong aria-hidden="true">3.2.</strong> Merging Poisson Processes</a></li><li class="chapter-item expanded "><a href="../poisson-processes/splitting-poisson-processes.html"><strong aria-hidden="true">3.3.</strong> Splitting Poisson Processes</a></li></ol></li><li class="chapter-item expanded "><a href="../simulation.html"><strong aria-hidden="true">4.</strong> Simulation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../simulation/monte-carlo.html"><strong aria-hidden="true">4.1.</strong> Monte Carlo</a></li><li class="chapter-item expanded "><a href="../simulation/discrete-time-simulation.html"><strong aria-hidden="true">4.2.</strong> Discrete-Time Simulation</a></li><li class="chapter-item expanded "><a href="../simulation/discrete-event-simulation.html"><strong aria-hidden="true">4.3.</strong> Discrete-Event Simulation (DES)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../simulation/discrete-event-simulation/example-of-a-single-server-fifo-queue.html"><strong aria-hidden="true">4.3.1.</strong> Example of a Single-server FIFO Queue</a></li></ol></li><li class="chapter-item expanded "><a href="../simulation/designing-a-simulation-model.html"><strong aria-hidden="true">4.4.</strong> Designing a Simulation Model</a></li></ol></li><li class="chapter-item expanded "><a href="../confidence-intervals.html"><strong aria-hidden="true">5.</strong> Confidence Intervals</a></li><li class="chapter-item expanded "><a href="../distribution-sampling.html"><strong aria-hidden="true">6.</strong> Distribution Sampling</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../distribution-sampling/inverse-transform-method.html"><strong aria-hidden="true">6.1.</strong> Inverse Transform Method</a></li><li class="chapter-item expanded "><a href="../distribution-sampling/acceptance-rejection-method.html"><strong aria-hidden="true">6.2.</strong> Acceptance-Rejection (AR) Method</a></li><li class="chapter-item expanded "><a href="../distribution-sampling/convolution-method.html"><strong aria-hidden="true">6.3.</strong> Convolution Method</a></li><li class="chapter-item expanded "><a href="../distribution-sampling/sampling-discrete-distributions.html"><strong aria-hidden="true">6.4.</strong> Sampling Discrete Distributions</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../preface.html"><strong aria-hidden="true">1.</strong> Preface</a></li><li class="chapter-item expanded "><a href="../operational-laws.html"><strong aria-hidden="true">2.</strong> Operational Laws</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../operational-laws/the-flow-balance-assumption.html"><strong aria-hidden="true">2.1.</strong> The Flow Balance Assumption</a></li><li class="chapter-item expanded "><a href="../operational-laws/open-and-closed-systems.html"><strong aria-hidden="true">2.2.</strong> Open and Closed Systems</a></li><li class="chapter-item expanded "><a href="../operational-laws/resources.html"><strong aria-hidden="true">2.3.</strong> Resources</a></li><li class="chapter-item expanded "><a href="../operational-laws/the-utilisation-law.html"><strong aria-hidden="true">2.4.</strong> The Utilisation Law</a></li><li class="chapter-item expanded "><a href="../operational-laws/littles-law.html"><strong aria-hidden="true">2.5.</strong> Little's Law</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../operational-laws/littles-law/the-response-time-law.html"><strong aria-hidden="true">2.5.1.</strong> The Response Time Law</a></li></ol></li><li class="chapter-item expanded "><a href="../operational-laws/forced-flow-law.html"><strong aria-hidden="true">2.6.</strong> Forced Flow Law</a></li><li class="chapter-item expanded "><a href="../operational-laws/the-service-demand-bottleneck-laws.html"><strong aria-hidden="true">2.7.</strong> The Service Demand/Bottleneck Laws</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../operational-laws/the-service-demand-bottleneck-laws/bottlenecks-and-throughput-bounds.html"><strong aria-hidden="true">2.7.1.</strong> Bottlenecks and Throughtput Bounds</a></li><li class="chapter-item expanded "><a href="../operational-laws/the-service-demand-bottleneck-laws/response-time-bounds.html"><strong aria-hidden="true">2.7.2.</strong> Response Time Bounds</a></li><li class="chapter-item expanded "><a href="../operational-laws/the-service-demand-bottleneck-laws/performance-optimisation.html"><strong aria-hidden="true">2.7.3.</strong> Performance Optimisation</a></li></ol></li><li class="chapter-item expanded "><a href="../operational-laws/traffic-equations.html"><strong aria-hidden="true">2.8.</strong> Traffic Equations</a></li></ol></li><li class="chapter-item expanded "><a href="../poisson-processes.html"><strong aria-hidden="true">3.</strong> Poisson Processes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../poisson-processes/properties-of-the-exponential-distribution.html"><strong aria-hidden="true">3.1.</strong> Properties of the Exponential Distribution</a></li><li class="chapter-item expanded "><a href="../poisson-processes/merging-poisson-processes.html"><strong aria-hidden="true">3.2.</strong> Merging Poisson Processes</a></li><li class="chapter-item expanded "><a href="../poisson-processes/splitting-poisson-processes.html"><strong aria-hidden="true">3.3.</strong> Splitting Poisson Processes</a></li></ol></li><li class="chapter-item expanded "><a href="../simulation.html"><strong aria-hidden="true">4.</strong> Simulation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../simulation/monte-carlo.html"><strong aria-hidden="true">4.1.</strong> Monte Carlo</a></li><li class="chapter-item expanded "><a href="../simulation/discrete-time-simulation.html"><strong aria-hidden="true">4.2.</strong> Discrete-Time Simulation</a></li><li class="chapter-item expanded "><a href="../simulation/discrete-event-simulation.html"><strong aria-hidden="true">4.3.</strong> Discrete-Event Simulation (DES)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../simulation/discrete-event-simulation/example-of-a-single-server-fifo-queue.html"><strong aria-hidden="true">4.3.1.</strong> Example of a Single-server FIFO Queue</a></li></ol></li><li class="chapter-item expanded "><a href="../simulation/designing-a-simulation-model.html"><strong aria-hidden="true">4.4.</strong> Designing a Simulation Model</a></li></ol></li><li class="chapter-item expanded "><a href="../confidence-intervals.html"><strong aria-hidden="true">5.</strong> Confidence Intervals</a></li><li class="chapter-item expanded "><a href="../distribution-sampling.html"><strong aria-hidden="true">6.</strong> Distribution Sampling</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../distribution-sampling/inverse-transform-method.html"><strong aria-hidden="true">6.1.</strong> Inverse Transform Method</a></li><li class="chapter-item expanded "><a href="../distribution-sampling/acceptance-rejection-method.html"><strong aria-hidden="true">6.2.</strong> Acceptance-Rejection (AR) Method</a></li><li class="chapter-item expanded "><a href="../distribution-sampling/convolution-method.html" class="active"><strong aria-hidden="true">6.3.</strong> Convolution Method</a></li><li class="chapter-item expanded "><a href="../distribution-sampling/sampling-discrete-distributions.html"><strong aria-hidden="true">6.4.</strong> Sampling Discrete Distributions</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -136,52 +136,38 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="merging-poisson-processes"><a class="header" href="#merging-poisson-processes">Merging Poisson Processes</a></h1>
-<p>When two independent Poisson processes with rates \( λ_1 \) and \( λ_2 \) are merged together, the result is also a Poisson process with rate \( λ_1 + λ_2 \).</p>
-<h3 id="proof"><a class="header" href="#proof">Proof</a></h3>
-<p>Let:</p>
-<ul>
-<li>\( T_1 \) and \( T_2 \) be the time until the next arrival for two Poisson processes.</li>
-<li>\( T \) be the time until the next arrival for the merged process.</li>
-</ul>
-<p>Then we get:</p>
+                        <h1 id="convolution-method"><a class="header" href="#convolution-method">Convolution Method</a></h1>
+<p>A distribution is a <strong>convolution</strong> of other distributions is it is the sum of their individual random variables. This sum can be weighted.</p>
+<h3 id="example"><a class="header" href="#example">Example</a></h3>
+<p>An \( Erlang(k, \theta) \) random variable is defined as the sum of \( k \) random variables, each following an \( exp(\theta) \) distribution.</p>
+<p>The expected value is given by:</p>
 <p>\[
-\begin{aligned}
-P(T \le t) &amp;= P(min(T_1, T_2) \le t) \\
-&amp;= 1 - e^{-t(λ_1 + λ_2)}
-\end{aligned}
+E(X) = {1 \over \theta} + {1 \over \theta} + \dots + {1 \over \theta} = {k \over \theta}
 \]</p>
-<p>Note that this is described more in detail in the <a href="./properties-of-the-exponential-distribution.html">Properties of the Exponential Distribution section</a>.</p>
-<p>This shows that the inter-arrival times of the merged process is exponential distributed, and so the merged process is Poisson.</p>
-<h2 id="generalised-merging"><a class="header" href="#generalised-merging">Generalised Merging</a></h2>
-<p>We can also generalise this for \( n \ge 2 \) processes. Consider a binary tree of merges. Since the output of a merge is Poisson, it can be merged with another process, thus creating a chain of merges:</p>
-<pre><code>  ()()
-   \/ merge
-   ()()
-    \/ merge
-    ()()
-     \/ merge
-     ()
-</code></pre>
-<h2 id="probability-of-arrival-orders"><a class="header" href="#probability-of-arrival-orders">Probability of Arrival Orders</a></h2>
-<p>The probability that the first arrival will come from the first stream is given by:</p>
+<p>Therefore, we can generate samples for an \( Erlang(k, \theta) \) random variable using the inverse transform technique on the exponential distribution. If \( X_i \sim exp(\theta) \):</p>
 <p>\[
-P(T_1 \lt T_2) = {\lambda_1 \over \lambda_1 + \lambda_2}
+X = \sum_{i = 1}^k X_i \sim Erlang(k, \theta)
 \]</p>
-<p>and likewise the probability that the first arrival is from the second stream is:</p>
+<p>Additionally, if \( U_i \sim U(0, 1) \) then \( X_i \) is sampled using:</p>
 <p>\[
-P(T_2 \lt T_1) = {\lambda_2 \over \lambda_1 + \lambda_2}
+-\ln{U_i \over \theta}
 \]</p>
-<p>Note that this is described more in detail in the <a href="./properties-of-the-exponential-distribution.html">Properties of the Exponential Distribution section</a>.</p>
+<p>Calculating the logarithm of a value can be quite computationally expensive, so we can manipulate the result from a summation to a product:</p>
+<p>\[
+\begin{align}
+X &amp;= \sum_{i = 1}^k - {\ln{U_i} \over \theta} \\
+&amp;= - {1 \over \theta} \ln \prod_{i = 1}^k U_i
+\end{align}
+\]</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../poisson-processes/properties-of-the-exponential-distribution.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../distribution-sampling/acceptance-rejection-method.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                            <a rel="next" href="../poisson-processes/splitting-poisson-processes.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../distribution-sampling/sampling-discrete-distributions.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -190,10 +176,10 @@ P(T_2 \lt T_1) = {\lambda_2 \over \lambda_1 + \lambda_2}
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../poisson-processes/properties-of-the-exponential-distribution.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../distribution-sampling/acceptance-rejection-method.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                    <a rel="next" href="../poisson-processes/splitting-poisson-processes.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../distribution-sampling/sampling-discrete-distributions.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

@@ -1,0 +1,289 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Acceptance-Rejection (AR) Method - 60020 Simulation and Modelling</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../preface.html"><strong aria-hidden="true">1.</strong> Preface</a></li><li class="chapter-item expanded "><a href="../operational-laws.html"><strong aria-hidden="true">2.</strong> Operational Laws</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../operational-laws/the-flow-balance-assumption.html"><strong aria-hidden="true">2.1.</strong> The Flow Balance Assumption</a></li><li class="chapter-item expanded "><a href="../operational-laws/open-and-closed-systems.html"><strong aria-hidden="true">2.2.</strong> Open and Closed Systems</a></li><li class="chapter-item expanded "><a href="../operational-laws/resources.html"><strong aria-hidden="true">2.3.</strong> Resources</a></li><li class="chapter-item expanded "><a href="../operational-laws/the-utilisation-law.html"><strong aria-hidden="true">2.4.</strong> The Utilisation Law</a></li><li class="chapter-item expanded "><a href="../operational-laws/littles-law.html"><strong aria-hidden="true">2.5.</strong> Little's Law</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../operational-laws/littles-law/the-response-time-law.html"><strong aria-hidden="true">2.5.1.</strong> The Response Time Law</a></li></ol></li><li class="chapter-item expanded "><a href="../operational-laws/forced-flow-law.html"><strong aria-hidden="true">2.6.</strong> Forced Flow Law</a></li><li class="chapter-item expanded "><a href="../operational-laws/the-service-demand-bottleneck-laws.html"><strong aria-hidden="true">2.7.</strong> The Service Demand/Bottleneck Laws</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../operational-laws/the-service-demand-bottleneck-laws/bottlenecks-and-throughput-bounds.html"><strong aria-hidden="true">2.7.1.</strong> Bottlenecks and Throughtput Bounds</a></li><li class="chapter-item expanded "><a href="../operational-laws/the-service-demand-bottleneck-laws/response-time-bounds.html"><strong aria-hidden="true">2.7.2.</strong> Response Time Bounds</a></li><li class="chapter-item expanded "><a href="../operational-laws/the-service-demand-bottleneck-laws/performance-optimisation.html"><strong aria-hidden="true">2.7.3.</strong> Performance Optimisation</a></li></ol></li><li class="chapter-item expanded "><a href="../operational-laws/traffic-equations.html"><strong aria-hidden="true">2.8.</strong> Traffic Equations</a></li></ol></li><li class="chapter-item expanded "><a href="../poisson-processes.html"><strong aria-hidden="true">3.</strong> Poisson Processes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../poisson-processes/properties-of-the-exponential-distribution.html"><strong aria-hidden="true">3.1.</strong> Properties of the Exponential Distribution</a></li><li class="chapter-item expanded "><a href="../poisson-processes/merging-poisson-processes.html"><strong aria-hidden="true">3.2.</strong> Merging Poisson Processes</a></li><li class="chapter-item expanded "><a href="../poisson-processes/splitting-poisson-processes.html"><strong aria-hidden="true">3.3.</strong> Splitting Poisson Processes</a></li></ol></li><li class="chapter-item expanded "><a href="../simulation.html"><strong aria-hidden="true">4.</strong> Simulation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../simulation/monte-carlo.html"><strong aria-hidden="true">4.1.</strong> Monte Carlo</a></li><li class="chapter-item expanded "><a href="../simulation/discrete-time-simulation.html"><strong aria-hidden="true">4.2.</strong> Discrete-Time Simulation</a></li><li class="chapter-item expanded "><a href="../simulation/discrete-event-simulation.html"><strong aria-hidden="true">4.3.</strong> Discrete-Event Simulation (DES)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../simulation/discrete-event-simulation/example-of-a-single-server-fifo-queue.html"><strong aria-hidden="true">4.3.1.</strong> Example of a Single-server FIFO Queue</a></li></ol></li><li class="chapter-item expanded "><a href="../simulation/designing-a-simulation-model.html"><strong aria-hidden="true">4.4.</strong> Designing a Simulation Model</a></li></ol></li><li class="chapter-item expanded "><a href="../confidence-intervals.html"><strong aria-hidden="true">5.</strong> Confidence Intervals</a></li><li class="chapter-item expanded "><a href="../distribution-sampling.html"><strong aria-hidden="true">6.</strong> Distribution Sampling</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../distribution-sampling/inverse-transform-method.html"><strong aria-hidden="true">6.1.</strong> Inverse Transform Method</a></li><li class="chapter-item expanded "><a href="../distribution-sampling/acceptance-rejection-method.html" class="active"><strong aria-hidden="true">6.2.</strong> Acceptance-Rejection (AR) Method</a></li><li class="chapter-item expanded "><a href="../distribution-sampling/convolution-method.html"><strong aria-hidden="true">6.3.</strong> Convolution Method</a></li><li class="chapter-item expanded "><a href="../distribution-sampling/sampling-discrete-distributions.html"><strong aria-hidden="true">6.4.</strong> Sampling Discrete Distributions</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">60020 Simulation and Modelling</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="acceptance-rejection-ar-method"><a class="header" href="#acceptance-rejection-ar-method">Acceptance-Rejection (AR) Method</a></h1>
+<p>If the c.d.f \( F(x) \) cannot be inverted then we can sometimes use the p.d.f \( f(x) \) instead.</p>
+<p>Firstly, find a function \( h(x) \) which <strong>dominates</strong> \( f(x) \), meaning \( h(x) \ge f(x) \) for all \( x \). Then generate a density function \( g(x) \) by &quot;normalising&quot; \( h(x) \) so that the area under \( g(x) \) is equal to \( 1 \):</p>
+<p>\[
+\int_x h(x) dx = c \implies g(x) = {h(x) \over c}
+\]</p>
+<p>Thus, the c.d.f is given by:</p>
+<p>\[
+\begin{align}
+G(x) &amp;= \int_{-\infty}^{x} g(t)dt \\
+&amp;= \int_{-\infty}^{x} {h(t) \over c} dt
+\end{align}
+\]</p>
+<p>\( g(x) \) and/or \( G(x) \) need to be easy to sample for this method to work.</p>
+<p>An alternative method is starting with some p.d.f \( g(x) \) and scaling it by a factor \( c \) to get a function \( h(x) \) which dominates \( f(x) \):</p>
+<p>\[
+\begin{align}
+c &amp;= c \int_x g(x) dx \\
+&amp;= \int_x h(x) dx
+\end{align}
+\]</p>
+<h2 id="ar-algorithm"><a class="header" href="#ar-algorithm">AR Algorithm</a></h2>
+<ol>
+<li>Let \( X \) be a sample from \( g(x) \) or \( G(x) \).</li>
+<li>Let \( U \) be a sample from the \( U(0, 1) \) distribution and let \( Y = U * h(X) \).</li>
+<li>If \( Y \le f(X) \) then <strong>accept</strong> \( X \), otherwise <strong>reject</strong> it and start over.</li>
+</ol>
+<p>Note that \( Y \le f(x) \) can also be rewritten as:</p>
+<p>\[
+U \le {f(X) \over h(X)} = {f(X) \over c * g(X)}
+\]</p>
+<p><img src="./images/acceptance-rejection-sample-graphs.png" alt="" /></p>
+<h3 id="example"><a class="header" href="#example">Example</a></h3>
+<p>Take a standard &quot;half-normal&quot; distribution (the standard normal distribution, but cut in half by taking only positive values of \( x \)):</p>
+<p>\[
+f(x) = {2 \over \sqrt{2 \pi}} e^{-x^2/2}
+\]</p>
+<p>Note that the \( 2 \) on top of the fraction is because a half normal has the area of \( 1 / 2 \), so it's multiplied by \( 2 \) to make it a valid p.d.f.</p>
+<p>Now take an arbitrary p.d.f, say \( g(x) = e^{x} \) (an exponential with parameter 1) as it is easy to sample. To calculate \( h(x) = c * g(x) \) such that it dominates \( f(x) \), \( c \) needs to be computed. Firstly find:</p>
+<p>\[
+\max_x {f(x) \over g(x)}
+\]</p>
+<p>by finding:</p>
+<p>\[
+\begin{align}
+c &amp;= \max_{x \ge 0} {{2 \over \sqrt{2 \pi}} e^{-x^2 / 2} \over e^{-x}} \\
+&amp;= \max_{x \ge 0} \sqrt{2 \over \pi} e^{x - x^2 / 2}
+\end{align}
+\]</p>
+<p>Through differentiation, the maximum of this equation is when \( x = 1 \) so:</p>
+<p>\[
+\begin{align}
+c &amp;= \sqrt{2 \over \pi} e^{1/2} \\
+&amp;= \sqrt{2e \over \pi}
+\end{align}
+\]</p>
+<p>and from this we get:</p>
+<p>\[
+h(x) = \sqrt{2e \over \pi} e^{-x} \\
+{f(x) \over h(x)} = e^{-{1 \over 2}(x - 1)^2}
+\]</p>
+<p><img src="./images/half-normal.png" alt="" /></p>
+<p>Using this, we can sample \( X \) from \( -\ln(1 - U_1) \) (found using the inverse transform method applied to the exponential distribution with parameter \( 1 \)) and accept \( X \) iff:</p>
+<p>\[
+U_2 \le {f(X) \over h(X)} = e^{-{1 \over 2}(X-1)^2}
+\]</p>
+<p>where \( U_1,U_2 \sim U(0, 1) \).</p>
+<h2 id="special-case"><a class="header" href="#special-case">Special Case</a></h2>
+<p>If \( a \le x \le b \) then we can bound \( f(x) \) within a rectangle using \( U(a,b) \). Let \( g(x) = {1 \over (b-a)} \) and \( h(x) = \max_x f(x) = m \). Then, sample \( X \) from \( U_1 * (b - a) + a \) and accept \( X \) iff:</p>
+<p>\[
+U_2 \le {f(X) \over h(X)} = {f(X) \over m}
+\]</p>
+<p>where \( U_1, U_2 \sim U(0,1) \).</p>
+<p><img src="./images/bounded-graph.png" alt="" /></p>
+<h3 id="proof"><a class="header" href="#proof">Proof</a></h3>
+<p>To prove this, we need to show that the values of \( X \) that are accepted have a c.d.f equal to \( F \):</p>
+<p>\[
+P \left( X \le x \mid U \le {f(X) \over h(X)} \right) = F(x)
+\]</p>
+<p>This is done by the following proof (remember that \( X \) has the density function \( g(X) \) and \( h(x) = c * g(x) \)):</p>
+<p>\[
+\begin{align}
+P \left( X \le x \mid U \le {f(X) \over h(X)} \right) &amp;= {P \left( U \le {f(X) \over c * g(X)} \land X \le x \right) \over P \left( U \le {f(X) \over c * g(X)} \right)} \\
+&amp;= {\int_0^x P \left( U \le {f(X) \over c * g(X)} \mid X = y \le x \right) g(y) dy \over {1 \over c} } \\
+&amp;= c \int_0^x {f(y) \over c * g(y)} g(y) dy \\
+&amp;= \int_0^x f(y) dy \\
+&amp;= F(x)
+\end{align}
+\]</p>
+<h2 id="efficiency"><a class="header" href="#efficiency">Efficiency</a></h2>
+<p>The efficiency of a particular dominating function depends on the number of rejections \( R \) before accepting a value of \( X \). The probability \( p \) of accepting a value of \( X \) in any single experiment is equal to the ratio of the areas of the two functions, \( f(x) \) and \( h(x) \). This is equal to \( 1 \over c \), and since each experiment is independent then this means \( R \) is <strong>geometrically</strong> distributed:</p>
+<p>\[
+P(R = r) = p(1 - p)^r
+\]</p>
+<p>so the expected number of rejections is given by:</p>
+<p>\[
+\begin{align}
+E(R) &amp;= {1 - p \over p} \\
+&amp;= c - 1
+\end{align}
+\]</p>
+<p>and since the next iteration should give be accepted, this gives the average number of iterations as simply \( c \). This value can be used to approximate the number of random numbers needed to sample a distribution. For example, in the half-normal example:</p>
+<p>\[
+c = \sqrt{2e \over \pi} = 1.315
+\]</p>
+<p>and each iteration needs two random \( U(0, 1) \) samples, so that is an average \( 2 * 1.315 = 2.63 \) samples per sample of \( X \).</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../distribution-sampling/inverse-transform-method.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../distribution-sampling/convolution-method.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../distribution-sampling/inverse-transform-method.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../distribution-sampling/convolution-method.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
