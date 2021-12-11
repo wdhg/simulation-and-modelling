@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Performance Indicies - 60020 Simulation and Modelling</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../preface.html"><strong aria-hidden="true">1.</strong> Preface</a></li><li class="chapter-item expanded "><a href="../../operational-laws.html"><strong aria-hidden="true">2.</strong> Operational Laws</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../operational-laws/the-flow-balance-assumption.html"><strong aria-hidden="true">2.1.</strong> The Flow Balance Assumption</a></li><li class="chapter-item expanded "><a href="../../operational-laws/open-and-closed-systems.html"><strong aria-hidden="true">2.2.</strong> Open and Closed Systems</a></li><li class="chapter-item expanded "><a href="../../operational-laws/resources.html"><strong aria-hidden="true">2.3.</strong> Resources</a></li><li class="chapter-item expanded "><a href="../../operational-laws/the-utilisation-law.html"><strong aria-hidden="true">2.4.</strong> The Utilisation Law</a></li><li class="chapter-item expanded "><a href="../../operational-laws/littles-law.html"><strong aria-hidden="true">2.5.</strong> Little's Law</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../operational-laws/littles-law/the-response-time-law.html"><strong aria-hidden="true">2.5.1.</strong> The Response Time Law</a></li></ol></li><li class="chapter-item expanded "><a href="../../operational-laws/forced-flow-law.html"><strong aria-hidden="true">2.6.</strong> Forced Flow Law</a></li><li class="chapter-item expanded "><a href="../../operational-laws/the-service-demand-bottleneck-laws.html"><strong aria-hidden="true">2.7.</strong> The Service Demand/Bottleneck Laws</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../operational-laws/the-service-demand-bottleneck-laws/bottlenecks-and-throughput-bounds.html"><strong aria-hidden="true">2.7.1.</strong> Bottlenecks and Throughtput Bounds</a></li><li class="chapter-item expanded "><a href="../../operational-laws/the-service-demand-bottleneck-laws/response-time-bounds.html"><strong aria-hidden="true">2.7.2.</strong> Response Time Bounds</a></li><li class="chapter-item expanded "><a href="../../operational-laws/the-service-demand-bottleneck-laws/performance-optimisation.html"><strong aria-hidden="true">2.7.3.</strong> Performance Optimisation</a></li></ol></li><li class="chapter-item expanded "><a href="../../operational-laws/traffic-equations.html"><strong aria-hidden="true">2.8.</strong> Traffic Equations</a></li></ol></li><li class="chapter-item expanded "><a href="../../poisson-processes.html"><strong aria-hidden="true">3.</strong> Poisson Processes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../poisson-processes/properties-of-the-exponential-distribution.html"><strong aria-hidden="true">3.1.</strong> Properties of the Exponential Distribution</a></li><li class="chapter-item expanded "><a href="../../poisson-processes/merging-poisson-processes.html"><strong aria-hidden="true">3.2.</strong> Merging Poisson Processes</a></li><li class="chapter-item expanded "><a href="../../poisson-processes/splitting-poisson-processes.html"><strong aria-hidden="true">3.3.</strong> Splitting Poisson Processes</a></li></ol></li><li class="chapter-item expanded "><a href="../../simulation.html"><strong aria-hidden="true">4.</strong> Simulation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../simulation/monte-carlo.html"><strong aria-hidden="true">4.1.</strong> Monte Carlo</a></li><li class="chapter-item expanded "><a href="../../simulation/discrete-time-simulation.html"><strong aria-hidden="true">4.2.</strong> Discrete-Time Simulation</a></li><li class="chapter-item expanded "><a href="../../simulation/discrete-event-simulation.html"><strong aria-hidden="true">4.3.</strong> Discrete-Event Simulation (DES)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../simulation/discrete-event-simulation/example-of-a-single-server-fifo-queue.html"><strong aria-hidden="true">4.3.1.</strong> Example of a Single-server FIFO Queue</a></li></ol></li><li class="chapter-item expanded "><a href="../../simulation/designing-a-simulation-model.html"><strong aria-hidden="true">4.4.</strong> Designing a Simulation Model</a></li></ol></li><li class="chapter-item expanded "><a href="../../confidence-intervals.html"><strong aria-hidden="true">5.</strong> Confidence Intervals</a></li><li class="chapter-item expanded "><a href="../../distribution-sampling.html"><strong aria-hidden="true">6.</strong> Distribution Sampling</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../distribution-sampling/inverse-transform-method.html"><strong aria-hidden="true">6.1.</strong> Inverse Transform Method</a></li><li class="chapter-item expanded "><a href="../../distribution-sampling/acceptance-rejection-method.html"><strong aria-hidden="true">6.2.</strong> Acceptance-Rejection (AR) Method</a></li><li class="chapter-item expanded "><a href="../../distribution-sampling/convolution-method.html"><strong aria-hidden="true">6.3.</strong> Convolution Method</a></li><li class="chapter-item expanded "><a href="../../distribution-sampling/sampling-discrete-distributions.html"><strong aria-hidden="true">6.4.</strong> Sampling Discrete Distributions</a></li></ol></li><li class="chapter-item expanded "><a href="../../continuous-time-markov-chains.html"><strong aria-hidden="true">7.</strong> Continuous-Time Markov Chains (CTMCs)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../continuous-time-markov-chains/steady-state-solution-of-a-markov-process.html"><strong aria-hidden="true">7.1.</strong> Steady-state SolRtion of a Markov Process</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../continuous-time-markov-chains/steady-state-solution-of-a-markov-process/derivation-of-balance-equations.html"><strong aria-hidden="true">7.1.1.</strong> Derivation ofAbove this point, Balance Equations</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../analytical-modelling-queueing-systems.html"><strong aria-hidden="true">8.</strong> Analytical Modelling: Queueing Systems</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../analytical-modelling-queueing-systems/marvokian-queueing-theory.html"><strong aria-hidden="true">8.1.</strong> Markovian Queueing Theory</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../analytical-modelling-queueing-systems/marvokian-queueing-theory/kendalls-notation.html"><strong aria-hidden="true">8.1.1.</strong> Kendall's Notation</a></li></ol></li><li class="chapter-item expanded "><a href="../../analytical-modelling-queueing-systems/the-mm1-queue.html"><strong aria-hidden="true">8.2.</strong> The M/M/1 Queue</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../analytical-modelling-queueing-systems/the-mm1-queue/steady-state-distribution.html"><strong aria-hidden="true">8.2.1.</strong> Steady-state Distribution</a></li><li class="chapter-item expanded "><a href="../../analytical-modelling-queueing-systems/the-mm1-queue/performance-indicies.html" class="active"><strong aria-hidden="true">8.2.2.</strong> Performance Indicies</a></li></ol></li><li class="chapter-item expanded "><a href="../../analytical-modelling-queueing-systems/state-dependent-mm1-queue.html"><strong aria-hidden="true">8.3.</strong> State-dependent M/M/1 Queue</a></li><li class="chapter-item expanded "><a href="../../analytical-modelling-queueing-systems/multiple-parallel-servers-mmc-queue.html"><strong aria-hidden="true">8.4.</strong> Multiple Parallel Servers M/M/c Queue</a></li><li class="chapter-item expanded "><a href="../../analytical-modelling-queueing-systems/infinite-parallel-servers-mminf-queue.html"><strong aria-hidden="true">8.5.</strong> Infinite Parallel Servers M/M/∞ Queue</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">60020 Simulation and Modelling</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="performance-indicies"><a class="header" href="#performance-indicies">Performance Indicies</a></h1>
+<p>Using the previous results, we can calculate some performance indicies.</p>
+<h3 id="throughtput--x-"><a class="header" href="#throughtput--x-">Throughtput \( X \)</a></h3>
+<p>When in state \( 0 \) the throughput is \( 0 \), and when in state \( n \gt 0 \) the throughput is \( \mu \).</p>
+<p>\[
+\begin{align}
+X &amp;= p_0 * 0 + (1 - p_0) * \mu \\
+&amp;= \rho \mu \\
+&amp;= \lambda
+\end{align}
+\]</p>
+<h3 id="server-utilisation--u-"><a class="header" href="#server-utilisation--u-">Server Utilisation \( U \)</a></h3>
+<p>The server is idle when \( n = 0 \), and is busy otherwise.</p>
+<p>\[
+\begin{align}
+U &amp;= 1 - p_0 \\
+&amp;= \rho
+\end{align}
+\]</p>
+<h3 id="mean-queue-length--n-"><a class="header" href="#mean-queue-length--n-">Mean Queue-length \( N \)</a></h3>
+<p>The population is a geometrically distributed random variable with parameter \( \rho \) (see <a href="#finding--p_n-">here</a>), so the mean population/queue-length is:</p>
+<p>\[
+\begin{align}
+N &amp;= \sum_{n=0}^{\infty} n p_n \\
+&amp;= {\rho \over 1 - \rho} \\
+\end{align}
+\]</p>
+<p><img src="./images/geometric-distribution-mean-graph.png" alt="" /></p>
+<p>Notice how this graph has an asymptote at \( \rho = 1 \).</p>
+<h3 id="mean-response-time--r-"><a class="header" href="#mean-response-time--r-">Mean Response Time \( R \)</a></h3>
+<p>Remember that the response time is equal to the mean time that a job spends inside the system (queueing time + service time). It can be found using <a href="/operational-laws/littles-law.html">Little's Law</a>:</p>
+<p>\[
+\begin{align}
+R &amp;= {N \over \lambda} \\
+&amp;= {1 / \mu \over 1 - \rho} \\
+&amp;= {1 \over \mu - \lambda}
+\end{align}
+\]</p>
+<h3 id="mean-number-of-customers-waiting-to-be-served--n_q-"><a class="header" href="#mean-number-of-customers-waiting-to-be-served--n_q-">Mean Number Of Customers Waiting To Be Served \( N_Q \)</a></h3>
+<p>On average, there are \( \rho \) customers being served. Therefore, the number of customers waiting to be served is equal to:</p>
+<p>\[
+\begin{align}
+N_Q &amp;= N - \rho \\
+&amp;= {\rho \over 1 - \rho} - \rho \\
+&amp;= {\rho - (1 - \rho) \rho \over 1 - \rho} \\
+&amp;= {\rho^2 \over 1 - \rho}
+\end{align}
+\]</p>
+<h2 id="response-time-knee"><a class="header" href="#response-time-knee">Response Time &quot;Knee&quot;</a></h2>
+<p><img src="./images/response-time-knee.png" alt="" /></p>
+<p>The point \( \rho = 0.7 \) is conventionally regarded as the &quot;knee&quot; point of this curve. If a system is above this point, it is considered to be under <strong>heavy-load</strong>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../analytical-modelling-queueing-systems/the-mm1-queue/steady-state-distribution.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../analytical-modelling-queueing-systems/state-dependent-mm1-queue.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../analytical-modelling-queueing-systems/the-mm1-queue/steady-state-distribution.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../analytical-modelling-queueing-systems/state-dependent-mm1-queue.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
