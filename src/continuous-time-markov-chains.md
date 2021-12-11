@@ -12,7 +12,7 @@
 
 where \\( q_{i, \\, j} \\) is the **transition-rate** from state \\( i \\) to state \\( j \\), \\( 1 \\le i, j \\le \\lvert S \\rvert \\) (more on generator matricies later).
 
-In a CTMC there are no self-loops as they don't effect the transitions out of the system (remember that Poisson Processes are memoryless). This means that the diagonal terms \\( q_{i,i} \\) are effectively unused, and so they can be used for something else. By convention, the negative sum of each row is stored in the diagonals:
+In a CTMC there are no self-loops as they don't affect the transitions out of the system (remember that Poisson Processes are memoryless). This means that the diagonal terms \\( q_{i,i} \\) are effectively unused, and so they can be used for something else. By convention, the negative sum of each row is stored in the diagonals:
 
 \\[
 q_{i,i} = - \\sum_{j \\in S, \\, j \\ne i} q_{i, \\, j}

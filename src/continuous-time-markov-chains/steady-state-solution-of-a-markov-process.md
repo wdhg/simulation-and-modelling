@@ -17,7 +17,7 @@ Given a **irreducible** (also known as _ergodic_) CTMC, meaning every state can 
 p_i \\sum_{j \\in S, \\, j \\ne i} q_{i, \\, j} = \\sum_{j \\in S, \\, j \\ne i} p_j q_{j, \\, i}
 \\]
 
-These are known as the (Global) **Balance Equations**. The left hand side is equal to the probability of leaving the state, and the right hand side is equal to the probability of entering the state. The derivation can be found here [here](/continuous-time-markov-chains/steady-state-solution-of-a-markov-process/derivation-of-balance-equations.html).
+These are known as the (Global) **Balance Equations**. The left-hand side is equal to the probability of leaving the state, and the right-hand side is equal to the probability of entering the state. The derivation can be found here [here](/continuous-time-markov-chains/steady-state-solution-of-a-markov-process/derivation-of-balance-equations.html).
 
 At equilibrium, a _finite_ CTMC with a finite generator matrix will statisfy the following equation:
 
