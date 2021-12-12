@@ -32,7 +32,7 @@
   - [Sampling Discrete Distributions](./distribution-sampling/sampling-discrete-distributions.md)
 - [Continuous-Time Markov Chains (CTMCs)](./continuous-time-markov-chains.md)
   - [Steady-state Solution of a Markov Process](./continuous-time-markov-chains/steady-state-solution-of-a-markov-process.md)
-    - [Derivation of, Balance Equations](./continuous-time-markov-chains/steady-state-solution-of-a-markov-process/derivation-of-balance-equations.md)
+    - [Derivation of Balance Equations](./continuous-time-markov-chains/steady-state-solution-of-a-markov-process/derivation-of-balance-equations.md)
 - [Analytical Modelling: Queueing Systems](./analytical-modelling-queueing-systems.md)
   - [Markovian Queueing Theory](./analytical-modelling-queueing-systems/marvokian-queueing-theory.md)
     - [Kendall's Notation](./analytical-modelling-queueing-systems/marvokian-queueing-theory/kendalls-notation.md)
