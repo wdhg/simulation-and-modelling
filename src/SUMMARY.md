@@ -42,3 +42,7 @@
   - [State-dependent M/M/1 Queue](./analytical-modelling-queueing-systems/state-dependent-mm1-queue.md)
   - [Multiple Parallel Servers M/M/c Queue](./analytical-modelling-queueing-systems/multiple-parallel-servers-mmc-queue.md)
   - [Infinite Parallel Servers M/M/∞ Queue](./analytical-modelling-queueing-systems/infinite-parallel-servers-mminf-queue.md)
+
+---
+
+[Cheatsheet](./cheatsheet.md)
