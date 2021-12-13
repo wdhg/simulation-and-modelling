@@ -38,6 +38,7 @@
 - \\( h(x) \\): A function which dominates f(x).
 - \\( g(x) \\): h(x) but scaled such that it's total area under the curve equals 1 (p.d.f).
 - \\( G(x) \\): The c.d.f of g(x).
+- \\( g(n, m) \\): The normalising constant of a closed network with \\( n \\) jobs and \\( m \\) nodes.
 
 ## Equations
 
