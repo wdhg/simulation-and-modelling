@@ -52,7 +52,9 @@
 \\begin{align}
 X &= {C \\over T} \\\\
   &= {N \\over R + Z} \\\\
-  &= {N \\over D + Z}
+  &= {N \\over D + Z} \\\\
+X(N) &= {U_M(N) \\over D_M} \\\\
+     &= {g(N-1, M) / g(N, M)}
 \\end{align}
 \\]
 
