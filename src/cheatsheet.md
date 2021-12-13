@@ -22,6 +22,7 @@
 - \\( D_k \\): Service demand.
 - \\( D_{max} \\): The maximum service demand.
 - \\( D \\): The sum of service demands.
+- \\( a_k \\): The number of arrivals to the system that move to node \\( k \\) directly.
 - \\( \\gamma_k \\): The direct contribution to throughput for node \\( k \\) from external arrivals.
 - \\( \\rho \\): The ratio \\( \\lambda / \\mu \\).
 
