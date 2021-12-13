@@ -28,7 +28,7 @@
 
 ### Vectors/Matricies
 
-- \\( \\boldsymbol{R} \\): The routing matrix of probabilities that a job goes from node \\( i \\) to node \\( j \\).
+- \\( \\boldsymbol{R} \\): The routing matrix of probabilities that a job goes from node \\( i \\) to node \\( j \\), indexed by \\( r_{i, j} \\).
 - \\( \\boldsymbol{Q} \\): The square generator matrix for a CTMC, indexed by \\( q_{i, \\, j} \\).
 
 ## Functions
