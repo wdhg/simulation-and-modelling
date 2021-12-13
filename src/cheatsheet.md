@@ -107,9 +107,9 @@ D_k &= V_k S_k \\\\
 
 \\[
 \\begin{align}
-C_k &= A a_k + C_1 r_{1, k} + C_2 + r_{2, k} + \\dots + C_n r_{n, k} \\\\
-V_k &= a_k + V_1 r_{1, k} + V_2 + r_{2, k} + \\dots + V_n r_{n, k} \\\\
-X_k &= \\gamma_k + X_1 r_{1, k} + X_2 + r_{2, k} + \\dots + X_n r_{n, k}
+C_k &= A a_k + C_1 r_{1, k} + C_2 r_{2, k} + \\dots + C_n r_{n, k} \\\\
+V_k &= a_k + V_1 r_{1, k} + V_2 r_{2, k} + \\dots + V_n r_{n, k} \\\\
+X_k &= \\gamma_k + X_1 r_{1, k} X_2 + r_{2, k} + \\dots + X_n r_{n, k}
 \\end{align}
 \\]
 
